@@ -8,13 +8,13 @@ public class Main {
 		Scanner s = new Scanner(System.in);
 		
 		do {System.out.println("\n");			
-			System.out.println("1 - добавить нового читателя");
-			System.out.println("2 - добавить книгу читателю");
-			System.out.println("3 - читатель хочет вернуть книгу");
-			System.out.println("4 - вывести стату читателя");
-			System.out.println("5 - вывести статусы всех читателей");
-			System.out.println("6 - выйти из программы");
-			System.out.println("Введите номер действия: ");
+			System.out.println("1 - Г¤Г®ГЎГ ГўГЁГІГј Г­Г®ГўГ®ГЈГ® Г·ГЁГІГ ГІГҐГ«Гї");
+			System.out.println("2 - Г¤Г®ГЎГ ГўГЁГІГј ГЄГ­ГЁГЈГі Г·ГЁГІГ ГІГҐГ«Гѕ");
+			System.out.println("3 - Г·ГЁГІГ ГІГҐГ«Гј ГµГ®Г·ГҐГІ ГўГҐГ°Г­ГіГІГј ГЄГ­ГЁГЈГі");
+			System.out.println("4 - ГўГ»ГўГҐГ±ГІГЁ Г±ГІГ ГІГі Г·ГЁГІГ ГІГҐГ«Гї");
+			System.out.println("5 - ГўГ»ГўГҐГ±ГІГЁ Г±ГІГ ГІГіГ±Г» ГўГ±ГҐГµ Г·ГЁГІГ ГІГҐГ«ГҐГ©");
+			System.out.println("6 - ГўГ»Г©ГІГЁ ГЁГ§ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»");
+			System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° Г¤ГҐГ©Г±ГІГўГЁГї: ");
             action = s.nextInt();
             s.nextLine();
 		switch(action) {
@@ -23,29 +23,29 @@ public class Main {
 			for (int i = 0; i<readers.length-1;i++) {
 				if(readers[i]==null) {
 					readers[i]= new Reader();
-					System.out.println("Введите фамилию и инициалы: ");
+					System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ ГґГ Г¬ГЁГ«ГЁГѕ ГЁ ГЁГ­ГЁГ¶ГЁГ Г«Г»: ");
 					readers[i].fio=s.nextLine();
 					readers[i].number=i+1;
-					System.out.println("Вам присвоен номер: "+readers[i].number);
-					System.out.println("Введите название факультета: ");
+					System.out.println("Г‚Г Г¬ ГЇГ°ГЁГ±ГўГ®ГҐГ­ Г­Г®Г¬ГҐГ°: "+readers[i].number);
+					System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г§ГўГ Г­ГЁГҐ ГґГ ГЄГіГ«ГјГІГҐГІГ : ");
 					readers[i].faculty=s.nextLine();
-					System.out.println("Введите день.месяц.год рождения: ");
+					System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г¤ГҐГ­Гј.Г¬ГҐГ±ГїГ¶.ГЈГ®Г¤ Г°Г®Г¦Г¤ГҐГ­ГЁГї: ");
 					readers[i].dob=s.nextLine();
-					System.out.println("Введите номер телефона: ");
+					System.out.println("РђСЂР°Р±СЃРєРёР№ С‚РµРєСЃС‚ РєР°РєРѕР№-С‚Рѕ: ");
 					readers[i].phone = s.nextInt();
 					isFull = true;
 break;
 				}	
 			}
 			if (isFull==false) {
-				System.out.println("Список картотеки полон");
+				System.out.println("Г‘ГЇГЁГ±Г®ГЄ ГЄГ Г°ГІГ®ГІГҐГЄГЁ ГЇГ®Г«Г®Г­");
 			}
 			break;
 		}
 		case 2:{
-			//просим ввести данные книги и создаем книгу, просим ввести номер билета
+			//ГЇГ°Г®Г±ГЁГ¬ ГўГўГҐГ±ГІГЁ Г¤Г Г­Г­Г»ГҐ ГЄГ­ГЁГЈГЁ ГЁ Г±Г®Г§Г¤Г ГҐГ¬ ГЄГ­ГЁГЈГі, ГЇГ°Г®Г±ГЁГ¬ ГўГўГҐГ±ГІГЁ Г­Г®Г¬ГҐГ° ГЎГЁГ«ГҐГІГ 
 			boolean found = true;
-			System.out.println("Введите номер билета: ");
+			System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° ГЎГЁГ«ГҐГІГ : ");
 			int num = s.nextInt();
 			for (int i = 0; i<readers.length-1;i++) {
 				
@@ -56,12 +56,12 @@ break;
 			}
 		}
 			if (found==true) {
-				System.out.println("Такого читателя нет");}
+				System.out.println("Г’Г ГЄГ®РїРѕС‡РµРјСѓГЈГ® Г·ГЁГІГ ГІГҐГ«Гї Г­ГҐГІ");}
 			continue;
 		}
 		case 3:{
 			boolean found = true;
-			System.out.println("Введите номер билета: ");
+			System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° ГЎГЁГ«ГҐГІГ : ");
 			int num = s.nextInt();
 			for (int i = 0; i<readers.length-1;i++) {
 				if (readers[i]!=null && readers[i].number==num) {				
@@ -71,12 +71,12 @@ break;
 			}
 			}
 			if (found == true) {
-					System.out.println("Такого читателя нет");}		
+					System.out.println("Г’Г ГЄГ®ГЈГ® Г·ГЁГІГ ГІГҐГ«Гї Г­ГҐГІ");}		
 		break;
 		}
 		case 4:{
 			boolean found = true;
-			System.out.println("Введите номер билета: ");
+			System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г®Г¬ГҐГ° ГЎГЁГ«ГҐГІГ : ");
 			int num = s.nextInt();
 			for (int i = 0; i<readers.length-1;i++) {
 				if (readers[i]!=null && readers[i].number==num) {
@@ -86,7 +86,7 @@ break;
 			}
 										}
 			if (found == true) {
-					System.out.println("Такого читателя нет");
+					System.out.println("Г’Г ГЄГ®ГЈГ® Г·ГЁГІГ ГІГҐГ«Гї Г­ГҐГІ");
 				}
 		break;
 		}
@@ -99,7 +99,7 @@ break;
 			break;
 		}
 			case 6: {
-				System.out.println("Выходим из программы!");
+				System.out.println("Г‚Г»ГµГ®Г¤ГЁГ¬ ГЁГ§ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»!");
 				break;
 			}
 		}
