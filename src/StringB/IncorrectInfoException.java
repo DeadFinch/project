@@ -23,7 +23,7 @@ public class IncorrectInfoException {
 		    }
 		    catch(MyException ex){
 		         
-		        System.out.println(ex.getMessage());
+		      ex.printStackTrace();
 		       
 		    }
 		} 
