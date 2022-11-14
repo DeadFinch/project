@@ -7,7 +7,7 @@ public class IncorrectInfoException {
 	     
 	       Pattern pattern = Pattern.compile("^[а-яА-Я]+ [а-яА-Я]+ [а-яА-Я]+$");
 	       Matcher matcher = pattern.matcher(FIO);
-	        if(num<0||num>100||FIO.length()>100||matcher.find()!=true) throw new MyException("incorrect age or FIO", num, FIO);
+	        if(num<0||num>100||FIO.length()>100||matcher.find()==false) throw new MyException("incorrect age or FIO", num, FIO);
 	         
 	        
 	        return FIO+" "+num+" лет";
