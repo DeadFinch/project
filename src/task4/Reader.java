@@ -1,9 +1,10 @@
 package belhard.task4;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
-public class Reader {
+public class Reader implements Serializable{
 	String fio;
 	int number;
 	String faculty;
@@ -22,37 +23,37 @@ int num = 0;
 				listBook.add(book);
 			
 			Scanner s = new Scanner(System.in);
-			System.out.println("Введите наименование книги которую хотите взять: ");	
+			System.out.println("Invite name a book: ");	
 			book.name=s.nextLine();
 			book.authorName="Noname";
 			book.text="some text";
 			t=false;
-			System.out.printf("%s взял книгу %s",fio,book.name);
+			System.out.printf("%s take a book %s",fio,book.name);
 			}
 			if (t==true) {
-				System.out.println("Лимит книг превышен");
+				System.out.println("You have limit books");
 			}
 				}
 		
 	void returnBook(){
 	Scanner s = new Scanner(System.in);
-	System.out.printf("размер книг %d%n",listBook.size());
-	System.out.println("Введите книгу которую хотите вернуть: ");
+	System.out.printf("size book %d%n",listBook.size());
+	System.out.println("Invite name a book which you want back: ");
 	String ret = s.nextLine();
 	for(Book book1:listBook) {
 		if (ret.equals(book1.name)) {
 	
 	listBook.remove(book1);
-			System.out.println(fio+" вернул книгу: "+ret);
+			System.out.println(fio+" back book: "+ret);
 			break;
 			}	
 	}
-	System.out.printf("размер книг %d",listBook.size());
+	System.out.printf("size book %d",listBook.size());
 	}
 			
 	
 void printStatus(){
-	System.out.printf("%s взял %d книг(и): ",fio,listBook.size());
+	System.out.printf("%s take %d book(s): ",fio,listBook.size());
 	for(Book book:listBook) {
 	
 System.out.printf("%s, ",book.name);
